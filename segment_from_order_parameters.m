@@ -6,8 +6,6 @@ function [map_out, numElement, varargout] = segment_from_order_parameters(map_in
 % v0.3(3/20/2024) add option for 4D input, take the order param with max
 % value
 % v0.4(5/02/2024) add numElement as output, with column 3 for parent OP
-% v0.5(6/11/2024) if an order parameter equals one in the first corner 
-% voxel, assume that order parameter is air - it doesn't contain grains.
 
 % INPUTS
 %   map_in
@@ -28,11 +26,6 @@ if ndims(map_in)==4 % grayscale map of each OP, dim-4 is OPs
 end
 
 if ndims(map_in)==3 % simplified volume w OP assigned for each voxel
-    
-    % mandate air in the first corner
-    if map_in(1)~=0
-        map_in(map_in==map_in(1)) = 0;
-    end
 
     if size(map_in,1)==size(boundsmask,1) && size(map_in,2)==size(boundsmask,2) && size(map_in,3)==size(boundsmask,3)
     
