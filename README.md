@@ -1,11 +1,11 @@
 # trackGrainsPF
 
-Varun Srinivas, Zachary Croft, Marcel Chlupsa
-University of Michigan (2024)
+Varun Srinivas, Zachary Croft, Marcel Chlupsa  
+University of Michigan (2024)  
 
 # Workflow
 
-1. Load data.
+1. Load data.  
 Use your own:
 ```Matlab
 load('myData.mat')
@@ -29,7 +29,7 @@ load('trackGrainsPF_data.mat')
 [tracked_grains] = track_grains_improved(map_t250,map_t900);
 ```
 
-4. Take a look at the result.
+4. Take a look at the result.  
 Open the tracked_grains variable and visualize a slice from each state:
 ```Matlab
 figure, imshow(squeeze(map_t250(:,200,:)),[])
