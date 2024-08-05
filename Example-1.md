@@ -27,8 +27,8 @@ load('trackGrainsPF_data.mat')
 4. Take a look at the result.
 Open the tracked_grains variable and visualize a slice from each state:
 ```Matlab
-figure, imshow(squeeze(map_t900(:,200,:)),[])
 figure, imshow(squeeze(map_t250(:,200,:)),[])
+figure, imshow(squeeze(map_t900(:,200,:)),[])
 ```
 ![image](https://github.com/user-attachments/assets/5249a2c8-5eac-46bf-be8b-ab6394d92151)
 
